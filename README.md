@@ -22,12 +22,13 @@
 `nb_test_samples = 3490`
 
 ####  используем VGG-подобную сверточную нейросеть
-компилируем модель с помощью SGD
+`компилируем модель с помощью SGD`
 
 ####  обучаем нейросеть
-H = model.fit_generator(aug.flow(trainX, trainY, batch_size=BS),
+
+`H = model.fit_generator(aug.flow(trainX, trainY, batch_size=BS),
 	validation_data=(testX, testY), steps_per_epoch=len(trainX) // BS,
-	epochs=EPOCHS)
+	epochs=EPOCHS)`
 ____
 ```
 Epoch 1/75
