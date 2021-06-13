@@ -4,22 +4,22 @@
 
 Перед использованием необходимо скачать и подготовить данные для обучения, проверки и тестирования.
 
-#### Каталог с данными для обучения
-'train'
+#### Каталог с данными для обучения 
+`'train'`
 ####  Каталог с данными для проверки
-'images'
+`'images'`
 ####  Размеры изображения
-img_width, img_height = 18, 60
+`img_width, img_height = 18, 60`
 ####  Количество эпох
-epochs = 75
+`epochs = 75`
 ####  Размер мини-выборки
-batch_size = 320
+`batch_size = 320`
 ####  Количество изображений для обучения
-nb_train_samples = 13691
+`nb_train_samples = 13691`
 ####  Количество изображений для проверки
-nb_validation_samples = 3490
+`nb_validation_samples = 3490`
 ####  Количество изображений для тестирования
-nb_test_samples = 3490
+`nb_test_samples = 3490`
 
 ####  используем VGG-подобную сверточную нейросеть
 компилируем модель с помощью SGD
@@ -29,7 +29,7 @@ H = model.fit_generator(aug.flow(trainX, trainY, batch_size=BS),
 	validation_data=(testX, testY), steps_per_epoch=len(trainX) // BS,
 	epochs=EPOCHS)
 ____
-'''
+```
 Epoch 1/75
 320/320 [==============================] - 45s 138ms/step - loss: 3.0718 - accuracy: 0.1586 - val_loss: 2.8747 - val_accuracy: 0.2039
 Epoch 2/75
@@ -180,9 +180,9 @@ Epoch 74/75
 320/320 [==============================] - 49s 153ms/step - loss: 0.2493 - accuracy: 0.9140 - val_loss: 0.0797 - val_accuracy: 0.9714
 Epoch 75/75
 320/320 [==============================] - 49s 153ms/step - loss: 0.2645 - accuracy: 0.9102 - val_loss: 0.0379 - val_accuracy: 0.9901
-'''
+```
 ____
-
+```
 [INFO] evaluating network...
               precision    recall  f1-score   support
 
@@ -200,11 +200,7 @@ ____
     accuracy                           0.99      3423
    macro avg       0.99      0.99      0.99      3423
 weighted avg       0.99      0.99      0.99      3423
-
-[INFO] serializing network and label binarizer...
-2021-06-13 20:38:35.692934: W tensorflow/python/util/util.cc:348] Sets are not currently considered sequences, but this may change in the future, so consider avoiding using them.
-
-Process finished with exit code 0
+```
 
 
 # оцениваем нейросеть
