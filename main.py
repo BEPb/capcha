@@ -1,12 +1,11 @@
 # файл тренировки нейронной сети
 # python 3.7
 # --dataset train --model output/smallvggnet.model --label-bin output/smallvggnet_lb.pickle --plot output/smallvggnet_plot.png
-# импортируем бэкенд Agg из matplotlib для сохранения графиков на диск
+
+
 
 import matplotlib
 matplotlib.use("Agg")
-
-# подключаем необходимые пакеты
 from pyimagesearch.smallvggnet import SmallVGGNet
 from sklearn.preprocessing import LabelBinarizer
 from sklearn.model_selection import train_test_split
@@ -21,10 +20,8 @@ import random
 import pickle
 import cv2
 import os
-
 import sys
 print(sys.version)
-
 import tensorflow as tf
 print(tf.__version__)
 
