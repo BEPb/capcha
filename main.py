@@ -1,7 +1,8 @@
-# USAGE
-# python train_vgg.py --dataset animals --model output/smallvggnet.model --label-bin output/smallvggnet_lb.pickle --plot output/smallvggnet_plot.png
+# файл тренировки нейронной сети
+# python 3.7
 # --dataset train --model output/smallvggnet.model --label-bin output/smallvggnet_lb.pickle --plot output/smallvggnet_plot.png
 # импортируем бэкенд Agg из matplotlib для сохранения графиков на диск
+
 import matplotlib
 matplotlib.use("Agg")
 
@@ -121,8 +122,8 @@ model = SmallVGGNet.build(width=18, height=60, depth=3,
 # инициализируем скорость обучения, общее число эпох
 # и размер пакета
 INIT_LR = 0.01
-EPOCHS = 75
-BS = 32
+EPOCHS = 75  # Количество эпох
+BS = 32  # batch_size - Размер мини-выборки
 
 # компилируем модель с помощью SGD (для бинарной классификации
 # следует использовать binary_crossentropy)

@@ -1,4 +1,4 @@
-# USAGE
+# проверка уже натренированной нейронки
 # python predict.py --image images/cat.jpg --model output/simple_nn.model --label-bin output/simple_nn_lb.pickle --width 32 --height 32 --flatten 1
 # python predict.py --image images/9.2167.png --model output/smallvggnet.model --label-bin output/smallvggnet_lb.pickle --width 18 --height 60
 
@@ -11,15 +11,15 @@ import cv2
 # создаём парсер аргументов и передаём их
 ap = argparse.ArgumentParser()
 ap.add_argument("-i", "--image", required=True,
-	help="path to input image we are going to classify")
+	help="path to input image we are going to classify")  # загружаем изображение
 ap.add_argument("-m", "--model", required=True,
-	help="path to trained Keras model")
+	help="path to trained Keras model")  # указываем папку и модель для сохранения
 ap.add_argument("-l", "--label-bin", required=True,
-	help="path to label binarizer")
+	help="path to label binarizer")  # указываем папку и бин для сохранения
 ap.add_argument("-w", "--width", type=int, default=28,
-	help="target spatial dimension width")
+	help="target spatial dimension width")  # указываем ширину
 ap.add_argument("-e", "--height", type=int, default=28,
-	help="target spatial dimension height")
+	help="target spatial dimension height")  # указываем высоту
 ap.add_argument("-f", "--flatten", type=int, default=-1,
 	help="whether or not we should flatten the image")
 args = vars(ap.parse_args())
