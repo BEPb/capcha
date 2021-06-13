@@ -206,27 +206,4 @@ Process finished with exit code 0
 
 
 # оцениваем нейросеть
-print("[INFO] evaluating network...")
-predictions = model.predict(testX, batch_size=32)
-print(classification_report(testY.argmax(axis=1),
-	predictions.argmax(axis=1), target_names=lb.classes_))
-
-# строим графики потерь и точности
-N = np.arange(0, EPOCHS)
-plt.style.use("ggplot")
-plt.figure()
-plt.plot(N, H.history["loss"], label="train_loss")
-plt.plot(N, H.history["val_loss"], label="val_loss")
-plt.plot(N, H.history["accuracy"], label="train_acc")
-plt.plot(N, H.history["val_accuracy"], label="val_acc")
-plt.title("Training Loss and Accuracy (SmallVGGNet)")
-plt.xlabel("Epoch #")
-plt.ylabel("Loss/Accuracy")
-plt.legend()
-plt.savefig(args["plot"])
-
-# сохраняем модель и бинаризатор меток на диск
-print("[INFO] serializing network and label binarizer...")
-model.save(args["model"])
-f = open(args["label_bin"], "wb")
-f.write(pickle.dumps(lb))
+Итоговая точность 99% из 3423 файлов
