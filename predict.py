@@ -6,7 +6,8 @@
 from keras.models import load_model
 import argparse
 import pickle
-import cv2
+import cv2  # библиотека  OpenCV обработки изображений и видео
+import os
 
 # создаём парсер аргументов и передаём их
 ap = argparse.ArgumentParser()
@@ -24,17 +25,24 @@ ap.add_argument("-f", "--flatten", type=int, default=-1,
 	help="whether or not we should flatten the image")
 args = vars(ap.parse_args())
 
+
 # загружаем входное изображение и меняем его размер на необходимый
 image = cv2.imread(args["image"])
 
-# проверка загрузки изображения
+# # проверка загрузки изображения
 # if image is None:
 #             print("no image passed")
 # else:
 # 	print("image load")
-
-output = image.copy()
-image = cv2.resize(image, (args["width"], args["height"]))
+# print(image)
+#
+# for i in os.listdir(r'D:\00. Обучение\05. Git\00. project\capcha\images'):
+#     fullpath = os.path.join(r'D:\00. Обучение\05. Git\00. project\capcha\images', i)
+#     img = cv2.imread(fullpath)
+#     print(img)
+#
+# output = image.copy()
+# image = cv2.resize(image, (args["width"], args["height"]))
 
 # масштабируем значения пикселей к диапазону [0, 1]
 image = image.astype("float") / 255.0

@@ -2,6 +2,7 @@
 # python 3.7
 # --dataset train --model output/smallvggnet.model --label-bin output/smallvggnet_lb.pickle --plot output/smallvggnet_plot.png
 
+# git clone https://github.com/BEPb/capcha
 
 
 import matplotlib
