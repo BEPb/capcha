@@ -1,3 +1,14 @@
+![Profile views](https://gpvc.arturio.dev/BEPb) 
+![GitHub top language](https://img.shields.io/github/languages/top/BEPb/capcha) 
+![GitHub language count](https://img.shields.io/github/languages/count/BEPb/capcha)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/BEPb/capcha)
+![GitHub repo size](https://img.shields.io/github/repo-size/BEPb/capcha) 
+![GitHub](https://img.shields.io/github/license/BEPb/capcha) 
+![GitHub last commit](https://img.shields.io/github/last-commit/BEPb/capcha)
+
+![GitHub User's stars](https://img.shields.io/github/stars/BEPb?style=social)
+
+
 ## Распознавание чисел капчи Wmail.ru от 0 до 9 на изображениях с помощью сверточной нейронной сети 
 
 Для распознавания используется сверточная нейронная сеть.
